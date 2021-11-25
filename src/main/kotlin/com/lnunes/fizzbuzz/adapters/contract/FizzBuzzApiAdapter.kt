@@ -38,4 +38,9 @@ interface FizzBuzzApiAdapter {
      * @param hash
      */
     suspend fun delete(hash: String)
+
+    /**
+     * Close adapter
+     */
+    fun close()
 }

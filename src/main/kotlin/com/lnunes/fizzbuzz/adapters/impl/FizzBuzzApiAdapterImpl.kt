@@ -58,4 +58,8 @@ class FizzBuzzApiAdapterImpl(private val host: String, private val apiKey: Strin
     override suspend fun delete(hash: String) {
         httpClient.delete<Success>("$host/fizzbuzz/$hash")
     }
+
+    override fun close() {
+        httpClient.close()
+    }
 }
